@@ -17,6 +17,11 @@ body {
   font-weight: bold;
 }
 
+.menu {
+  display: flex;
+  gap: 15px;
+}
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -33,9 +38,6 @@ body {
 
   .menu.open {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 
   .hamburger {
