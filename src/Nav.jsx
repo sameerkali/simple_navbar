@@ -4,7 +4,6 @@ import "./index.css";
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-
   return (
     <nav className="navbar">
       <img
@@ -16,13 +15,16 @@ const Nav = () => {
         src="/vite.svg"
       />
       <div className={`menu ${isOpen ? "open" : ""}`}>
+        <div className="hamburger" onClick={() => setIsOpen(p => !p)}>
+          {isOpen && "X"}
+        </div>
         <h1>Home</h1>
         <h1>About</h1>
         <h1>Blog</h1>
         <h1>Contact Us</h1>
       </div>
       <div className="hamburger" onClick={() => setIsOpen(p => !p)}>
-       {isOpen ?  'close' : "open"}
+        {isOpen ? "X" : "O"}
       </div>
     </nav>
   );
